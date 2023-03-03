@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Zuddhi Systems.com</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        *{
+            margin:0;
+            padding:0;
+
+        }
+        .main {
+            width: auto;
+            background-image: url('../../content/image/web.jpg');
+            background: linear-gradient(to top,rgb(0, 0, 0,0.5)50%,rgb(0, 0, 0,0.5)50%),url(../../content/image/web.jpg);
+            background-position: center;
+            background-size: cover;
+            height: 109vh;
+        }
+       
+        .navbar{
+            width:1200px;
+            height:75px;
+            margin:auto;
+            
+        }
+        .icon{
+            width:200px;
+            float:left;
+            height:70px;
+        }
+        .logo {
+            color: #ff6a00;
+            font-size: 35px;
+            font-family: Arial;
+            padding-left: 20px;
+            float: left;
+            padding-top: 10px;
+        }
+        .menu{
+            width:500px;
+            float:left;
+            height:75px;
+        }
+        ul{
+            float:left;
+            display:flex;
+            justify-content:center;
+            align-content:center;
+        }
+            ul li {
+                list-style: none;
+                margin-left: 60px;
+                margin-top: 20px;
+                font: 14px;
+            }
+            ul li{
+              text-decoration:none;
+              color:white;
+              font-family:Arial;
+              font-weight:bold;
+              transition:0.4s ease-in-out;
+            }
+            ul li:hover{
+                color:orange;
+            }
+            .search{
+                width:330px;
+                float:left;
+                margin-left:270px;
+            }
+            .srch{
+                font-family:'Times New Roman';
+                width:288px;
+                height:40px;
+                background:transparent;
+                border:1px solid #ff6a00;
+                margin-top:13px;
+                color:white;
+                border-right:none;
+                float:left; 
+                padding:10px;
+                border-bottom-left-radius:5px;
+                border-top-left-radius:5px;
+            }
+        .btn {
+            width: 100px;
+            height: 40px;
+            background: #ff6a00;
+            border: 2px solid #ff6a00;
+            margin-top: 13px;
+            color: white;
+            font-size: 15px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        .btn:focus{
+            outline:none;
+        }
+        .srch:focus{
+            outline:none;
+        }
+        .content {
+            width: 1200px;
+            height: auto;
+            margin: auto;
+            color: white;
+            position: relative;
+        }
+        .content .par{
+            padding-left:20px;
+            padding-bottom:25px;
+            font-family:Arial;
+            letter-spacing:1.2px;
+            line-height:30px;
+        }
+        .content h1{
+            font-family:'Times New Roman';
+            font-size:50px;
+            padding-left:20px;
+            margin-top:9%;
+            letter-spacing:2px;
+
+        }
+        .content .cn{
+            width:160px;
+            height:40px;
+            background:aqua;
+            border:none;
+            justify-content:center;
+            margin-bottom:10px;
+            margin-left:20px;
+            font-size:18px ;
+            border-radius:10px;
+            cursor:pointer;
+            transition:.4s ease;  
+
+        }
+        .content .cn a{
+            text-decoration:none;
+            color:black;
+            transition:.3s ease;
+        }
+        .cn:hover{
+            background:darkviolet;
+        }
+        .content span{
+            color:aqua;
+            font-size
+        }
+
+        .form {
+            width: 250px;
+            height: 380px;
+            background: linear-gradient(to top,rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+            position:absolute;
+            top:-20px;
+            left:870px;
+            border-radius:10px;
+            padding:25px;
+        }
+        .form h2{
+            width:220px;
+            font-family:sans-serif;
+            text-align:center;
+            color:orange;
+            font-size:22px;
+            background-color:aqua;
+            border-radius:10px;
+            margin:2px;
+            padding:8px;
+        }
+
+        
+    </style>
+
+</head> 
+
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <span class="nav-logo">
+                    <a href="main.html">
+                        <img src="~/Content/Image/zuddhipngnocircle.png"  alt="Zddhi Systems" title="Zuddhi Systems"
+                        style="height:3.8rem;"/>
+                    </a>
+                </span>
+                <h2 class="logo" style="color:aqua">Zuddhi Systems</h2>
+
+            </div>
+            <div class="menu">
+                <ul>
+
+                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("SalseForce", "SalseForce", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("SharePoint", "SharePoint", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Training", "Training", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="search" name="" placeholder="Search" >
+                <a href="#"><button class="btn">Search</button></a>
+
+            </div>
+
+        </div>
+        <div class="content">
+            <h1 style="color:white">Microsoft Business Intelligence</h1>   
+            <p class="par">Deliver actionable data insights to everyone in the organization. Get the most out of Microsoft BI solutions including architecture, planning,
+            <br />system design, development, and lifecycle management</p>
+
+            <button class="cn"><a href="#">Join us </a></button>
+
+            <div class="form">
+                <h2>Login Here</h2>
+                <input type="email" name="email" placeholder="Enter Email " />
+                <input type="password" name="password" placeholder="Enter password " />
+                <button class=" btn"><a href="#">Login</a></button>
+
+                <p class="link">Create account</p>
+                <a href="#">Sign Up</a>
+                <p class="link-warning">Login in With</p>
+
+            </div>
+        </div>
+
+    </div>
+      
+        
+
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html> 
